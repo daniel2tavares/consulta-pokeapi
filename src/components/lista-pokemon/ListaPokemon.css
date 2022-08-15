@@ -1,0 +1,6 @@
+.lista-pokemons{
+    display: flex;
+    flex-direction: column;   
+    
+}
+

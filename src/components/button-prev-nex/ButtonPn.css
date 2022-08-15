@@ -1,0 +1,13 @@
+.button-pn{
+    background-color: #28aafe;
+    color: white;
+    width: 100px;
+    height: 30px;
+    border: none;
+    border-radius: 3px;   
+    cursor: pointer;
+}
+
+.button-pn:hover{
+    background-color: #51ae61;
+}

@@ -1,23 +1,25 @@
-import logo from './logo.svg';
+import { React } from 'react';
 import './App.css';
+import ButtonPn from './components/button-prev-nex/ButtonPn'
+import CardPokemon from './components/card-pokemon/CardPokemon';
+import ListaPokemon from './components/lista-pokemon/ListaPokemon';
 
 function App() {
-  return (
+
+ return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Processo seletivo da Iteris
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      
+      <section className='cardPai'>  
+      <ListaPokemon />  
+        <div className='buttons'>
+          <ButtonPn name='Prev' />
+          <ButtonPn name='Next' />
+        </div>
+      </section>
+      <section className='cardPai'>
+          <CardPokemon />
+      </section>
+
     </div>
   );
 }
