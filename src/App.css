@@ -12,13 +12,8 @@
     border: 6px solid #000000;
     border-radius: 10px;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-around;
     align-items: center;
-    
-}
-
-.buttons{
-    width: 210px;
-    display: flex;
-    justify-content: space-between;
+       
 }

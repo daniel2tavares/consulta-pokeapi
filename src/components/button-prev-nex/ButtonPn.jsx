@@ -5,7 +5,7 @@ function ButtonPn(props){
 
     return(
         <>
-            <button className="button-pn">{props.name}</button>
+            <button onClick={props.event} className="button-pn">{props.name}</button>
         </>
               
     )
