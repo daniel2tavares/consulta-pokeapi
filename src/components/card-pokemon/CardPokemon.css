@@ -4,14 +4,15 @@
     justify-content: space-around;
     align-items: center;
     width: 100%;
-    height: 90%;      
+    
 }
 
 .card-pokemon img{
-    width: 70%;
+    width: 40%;
     height: auto;
     border-radius: 10px;
     border: 15px solid #dedede;
+    background-color: #28aafe;
 
 }
 
@@ -38,31 +39,13 @@
 }
 
 .display-progress{
-    width: 95%;
-    height: 5%;
-    display: flex;
-    flex-direction: row;
-    align-items:center; 
-    justify-content: flex-end;
-    column-gap: 10px;
-}
-
-.display-progress h5{
-    width: 25%;
+    width: 90%; 
+    
 }
 
 .progress-bar{
-    --progress: 100;
-    width: 75%;
-    height: 15px;
-    padding: 5px;
-    background-color: #ccc;
+    width: 100%;
     display: flex;
-    
-  }
+    align-items: flex-end;
+}
   
-  .progress-bar::before{
-    content: "";
-    width: calc(var(--progress) * 1%);
-    background-color: hsl( calc(var(--progress) * 1.2) , 80%, 50%);
-  }
