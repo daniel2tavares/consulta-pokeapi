@@ -3,13 +3,14 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    width: 100%;
+    width: 90%;
+    height: 90%;
     
 }
 
 .card-pokemon img{
-    width: 40%;
-    height: auto;
+    width: 50%;
+    height: 30%;
     border-radius: 10px;
     border: 15px solid #dedede;
     background-color: #28aafe;
@@ -28,7 +29,7 @@
     justify-content: space-around;
     align-items: center;
     column-gap: 10px;
-    padding-bottom: 10px;
+    
 }
 
 .displayPokemon div{

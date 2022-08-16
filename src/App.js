@@ -7,7 +7,7 @@ import api from "./services/api";
 function App() {
   const [data, setData] = useState([]);
   const [count, setCount] = useState(0);
-  const [data2, setData2] = useState([]);
+  const [data2, setData2] = useState(null);
   const [pokeActive, setPokeActive] = useState("bulbasaur");
 
   useEffect(() => {
@@ -35,10 +35,29 @@ function App() {
   return (
     <div className="App">
       <section className="cardPai">
-        <ListaPokemon dataLista={data} />
+        <ListaPokemon
+          changePoke={(value) => {
+            setPokeActive(value);
+          }}
+          avancarLista={() => {
+            if (count === 1154) {
+              setCount(1154);
+            } else {
+              setCount(count + 6);
+            }
+          }}
+          voltarLista={() => {
+            if (count === 0) {
+              setCount(0);
+            } else {
+              setCount(count - 6);
+            }
+          }}
+          dataLista={data}
+        />
       </section>
       <section className="cardPai">
-        <CardPokemon dataCard={data2} />
+        {data2 && <CardPokemon dataCard={data2} />}
       </section>
     </div>
   );

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import '../../components/card-pokemon/CardPokemon.css'
 import ListaPokemon from "../lista-pokemon/ListaPokemon";
 
+const nomeAtributo = ['hp', 'attack','defense','speed']
 
 function CardPokemon(props){   
 
@@ -10,14 +11,21 @@ function CardPokemon(props){
          <img src={props.dataCard.sprites.front_shiny}></img>
          <h2>{props.dataCard.name}</h2>
             <div className="displayPokemon">
-                <div>{props.dataCard.types[0].type.name}</div>
-                <div>{props.dataCard.types[1].type.name}</div>
+                {props.dataCard&&props.dataCard.types&&props.dataCard.types.map((type) => {
+                    return(
+                        <div>{type.type.name}</div>
+                    )
+                })}                
             </div>
             <div className="display-progress">
-               <h5>{(props.dataCard.stats[0].stat.name).toUpperCase()}  <progress max ='100' value={props.dataCard.stats[0].base_stat} className="progress-bar"></progress></h5> 
-               <h5>{(props.dataCard.stats[1].stat.name).toUpperCase()}  <progress max ='100' value={props.dataCard.stats[1].base_stat} className="progress-bar"></progress></h5> 
-               <h5>{(props.dataCard.stats[2].stat.name).toUpperCase()}  <progress max ='100' value={props.dataCard.stats[2].base_stat} className="progress-bar"></progress></h5>
-               <h5>{(props.dataCard.stats[5].stat.name).toUpperCase()}  <progress max ='100' value={props.dataCard.stats[5].base_stat} className="progress-bar"></progress></h5>                    
+
+            {props.dataCard&&props.dataCard.stats
+            .filter((stat)=>nomeAtributo.includes(stat.stat.name))
+            .map((status) => {
+                    return(
+                        <h5>{(status.stat.name).toUpperCase()}  <progress max ='100' value={status.base_stat} className="progress-bar"></progress></h5> 
+                    )
+                })} 
             </div>      
         </div>
               

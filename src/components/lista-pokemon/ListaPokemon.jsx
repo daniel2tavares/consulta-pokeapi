@@ -5,28 +5,7 @@ import App from "../../App";
 
 function ListaPokemon(props) {
 
-    // function changePoke(){
-    //     setPokeActive('charmander')
-    // }
-
-    // function avancarLista() {
-
-    //     if(count===1154){
-    //         setCount(1154)
-    //     }else{
-    //         setCount(count + 6)            
-    //     }
-    // }
-
-    // function voltarLista() {
-    //     if (count === 0) {
-    //         setCount(0)
-    //     } else {
-    //         setCount(count - 6)
-    //     }
-    // }
-
-    return (
+       return (
         <>
             <div className="lista-pokemons">
 
@@ -35,15 +14,15 @@ function ListaPokemon(props) {
                     props.dataLista && props.dataLista.results && props.dataLista.results.map((result) => {
 
                         return (
-                            <h3 key={result.name}>{result.name}</h3>
+                            <h3 onClick={()=> props.changePoke(result.name)} key={result.name}>{result.name}</h3>
                         )
                     })
                 }
 
             </div>
             <div className='buttons'>
-                {/* <ButtonPn event={voltarLista} name='Prev' />
-                <ButtonPn event={avancarLista} name='Next' /> */}
+                <ButtonPn event={props.voltarLista} name='Prev' />
+                <ButtonPn event={props.avancarLista} name='Next' />
             </div>
         </>
     )
