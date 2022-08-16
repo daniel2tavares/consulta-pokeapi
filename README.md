@@ -1,70 +1,57 @@
-# Getting Started with Create React App
+<h1 align="center">CONSULTA POKE-API</h1 align="center">
+ <br />
+  <p align="center">SUMÁRIO<p align="center">
+  <a href="#sobre"> Sobre </a> |
+  <a href="#Requisitos">Requisitos</a> |
+  <a href="#usamos"> Usamos </a> |
+  <a href="#rodando-o-projeto"> Rodando o projeto </a> 
+       <br />
+    <br />
+  </p>
+</p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Sobre:
 
-## Available Scripts
+Projeto criado como parte do processo seletivo da Iteris<br>
 
-In the project directory, you can run:
+Proposta: Criar um frontend com o catálogo de todos os Pokemons e suas respectivas informações. Para isto, iremos utilizar a PokeApi para recuperar os dados dos Pokemons e exibi-los em tela (inclusive as imagens). O frontend deverá conter uma lista paginada dos pokemons, com uma ação para exibir os detalhes de um determinado pokemon do lado direito da lista caso o usuário clique em um dos nomes dos pokemons.<br>
 
-### `npm start`
+# Requisitos obrigatórios:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Uma listagem paginada de pokemons;
+- Um componente de detalhe de pokemons;
+- Um Easter Egg do Pikachu ;
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# Usamos:
 
-### `npm test`
+✔ React.js
+✔ Node.js
+✔ Create react app
+✔ Poke Api
+✔ Axios
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+# Links uteis
 
-### `npm run build`
+✔[Git](https://git-scm.com) <br>
+✔[VSCode](https://code.visualstudio.com/) <br>
+✔[Node.js](https://nodejs.org/en/) <br>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Rodando o projeto
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Para fazer uso localmente, utilizando o terminal de sua preferência use o seguinte comando:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+`git clone https://github.com/daniel2tavares/consulta-pokeapi.git`
 
-### `npm run eject`
+Logo após use o comando:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+`cd consulta-pokeapi`
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Após trocar o repositório abra pasta de destino utilizando o VSCode,<br>
+abra o terminal do versionador de código com o comando CTRL+J e instale o NPM para rodar o projeto localmente<br>
+com todas as dependências necessárias através de:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+`npm install`
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Para iniciar o projeto utilize:
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+`npm start`
