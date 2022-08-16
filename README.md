@@ -1,4 +1,8 @@
-<h1 align="center">CONSULTA POKE-API</h1 align="center">
+<br />
+<p align="center">
+    <img src="./readme/pikachu.gif" alt="Logo" width="700">
+    
+  <h1 align="center">CONSULTA POKE-API</h1 align="center">
  <br />
   <p align="center">SUMÁRIO<p align="center">
   <a href="#sobre"> Sobre </a> |
