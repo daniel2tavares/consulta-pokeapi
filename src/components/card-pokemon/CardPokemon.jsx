@@ -1,11 +1,12 @@
 import React from "react";
 import '../../components/card-pokemon/CardPokemon.css'
+import ListaPokemon from "../lista-pokemon/ListaPokemon";
 
 function CardPokemon(){
 
     return(
         <div className="card-pokemon">
-         <img src="https://sm.ign.com/t/ign_br/news/a/a-pokemon-/a-pokemon-fan-has-crocheted-more-than-500-different-species_cd3x.620.jpg"></img>
+         <img src=''></img>
          <h2>Nome do Pokemon</h2>
             <div className="displayPokemon">
                 <div>TIPO 1</div>

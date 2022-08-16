@@ -1,9 +1,8 @@
 .lista-pokemons{
     display: flex;
     flex-direction: column; 
-    width: 100%;  
-    padding-left: 30px;
-    
+    width: 90%;    
+    padding-left: 30px;  
     
 }
 
@@ -16,6 +15,7 @@
 .lista-pokemons >h3{
     
     cursor: pointer;
+       
 }
 
 .buttons{

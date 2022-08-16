@@ -6,7 +6,9 @@ import ButtonPn from "../button-prev-nex/ButtonPn";
 function ListaPokemon() {
 
     const [data, setData] = useState([]);
+    const [data2, setData2] = useState([]);
     const [count, setCount] = useState(0);
+    const [pokeActive, setPokeActive] = useState('bulbasaur')
 
     function avancarLista(){
         
@@ -24,6 +26,9 @@ function ListaPokemon() {
         }
     }
 
+    function changePoke(){
+        setPokeActive('charmander')
+    }
 
     useEffect(() => {
         api.get(`pokemon/?offset=${count}&limit=6`)
@@ -35,22 +40,26 @@ function ListaPokemon() {
             })
     },[count]);
 
-
+    useEffect(() => {
+        api.get(`pokemon/${pokeActive}`)
+            .then((response) => {
+                setData2(response.data);
+            })
+            .catch((error) => {
+                console.log('falta de conexao com a api')
+            })
+    },[pokeActive]);
 
     return (
         <>
             <div className="lista-pokemons">
 
                 <h1>Pokemons</h1>
-
                 {
                     data && data.results && data.results.map((result) => {
 
                         return (
-
-                            <h3 key={result.name}>{result.name}</h3>
-
-
+                            <h3 onClick={changePoke} key={result.name}>{result.name}</h3>
                         )
                     })
                 }
@@ -64,7 +73,5 @@ function ListaPokemon() {
     )
 
 }
-
-
 
 export default ListaPokemon;
