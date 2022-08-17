@@ -15,8 +15,7 @@ function CardPokemon(props) {
         onClick={()=> {
             setCountEA(countEA + 1)
             if(countEA == 3 && props.dataCard.name == 'pikachu' ){
-              console.log(countEA)
-                props.changeEgg()
+              props.changeEgg()
             }
         }} 
         src={props.dataCard.sprites.front_shiny}
