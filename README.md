@@ -1,4 +1,3 @@
-<br />
 <p align="center">
     <img src="./readme/pikachu.gif" alt="Logo" width="700">
     

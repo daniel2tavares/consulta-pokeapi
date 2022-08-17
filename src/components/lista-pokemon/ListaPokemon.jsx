@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import './ListaPokemon.css'
 import ButtonPn from "../button-prev-nex/ButtonPn";
 import App from "../../App";

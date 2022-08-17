@@ -3,12 +3,15 @@ import "./App.css";
 import CardPokemon from "./components/card-pokemon/CardPokemon";
 import ListaPokemon from "./components/lista-pokemon/ListaPokemon";
 import api from "./services/api";
+import image from "./assets/bg.png"
+import pikabg from "./assets/pikachubg.svg"
 
 function App() {
   const [data, setData] = useState([]);
   const [count, setCount] = useState(0);
   const [data2, setData2] = useState(null);
   const [pokeActive, setPokeActive] = useState("bulbasaur");
+  const [pikaBackGround, setPikaBackGround] =useState(image)
 
   useEffect(() => {
     api
@@ -32,7 +35,8 @@ function App() {
       });
   }, [pokeActive]);
 
-  return (
+   return (
+    <body style={{ backgroundImage:`url(${pikaBackGround})` }}>
     <div className="App">
       <section className="cardPai">
         <ListaPokemon
@@ -57,9 +61,12 @@ function App() {
         />
       </section>
       <section className="cardPai">
-        {data2 && <CardPokemon dataCard={data2} />}
+        {data2 && <CardPokemon changeEgg={() => {
+            setPikaBackGround(pikabg);
+          }} dataCard={data2} />}
       </section>
     </div>
+    </body>
   );
 }
 
